@@ -14,8 +14,8 @@
     "start": "node dist/src/index",
     "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "pretest": "npm run build",
-    "test": "mocha dist/test/**/*.js",
-    "test:dev": "ts-mocha test/**/*.spec.ts -w --watch-files '**/*.ts'"
+    "mocha-test": "mocha dist/test/**/*.js",
+    "mocha-test:dev": "ts-mocha test/**/*.spec.ts -w --watch-files '**/*.ts'"
   },
   "devDependencies": {
     "@types/chai": "^5.2.2",
