@@ -15,4 +15,4 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - run: npm run build
-      - run: npm mocha-test
+      - run: npm run mocha-test

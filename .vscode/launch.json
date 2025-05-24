@@ -29,5 +29,13 @@
       "internalConsoleOptions": "openOnSessionStart",
       "preLaunchTask": "npm: build",
     },
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "mocha-test",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": ["run", "mocha-test"],
+        "console":"integratedTerminal",
+    },
   ]
 }
