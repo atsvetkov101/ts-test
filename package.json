@@ -1,0 +1,37 @@
+{
+  "name": "ts-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:dist": "rimraf ./dist",
+    "clean:modules": "rimraf ./node_modules",
+    "clean": "npm run clean:dist && npm run clean:modules",
+    "lint": "npx eslint src/**/*.ts",
+    "lint:fix": "npx eslint --fix src/**/*.ts && npx eslint --fix test/**/*.ts",
+    "prebuild": "npm run clean:dist",
+    "build": "tsc",
+    "start": "node dist/src/index",
+    "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "pretest": "npm run build",
+    "test": "mocha dist/test/**/*.js",
+    "test:dev": "ts-mocha test/**/*.spec.ts -w --watch-files '**/*.ts'"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/lodash": "^4.17.17",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.15.21",
+    "@types/sinon": "^17.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "chai": "^5.2.0",
+    "eslint": "^9.27.0",
+    "mocha": "^11.5.0",
+    "rimraf": "^6.0.1",
+    "sinon": "^20.0.0",
+    "ts-mocha": "^11.1.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
